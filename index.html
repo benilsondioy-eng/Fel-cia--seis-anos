@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flícia ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #0b0b0b;
+    color: #f5f1eb;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    padding: 70px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero {
+    position: relative;
+    background:
+        radial-gradient(circle at center, #3b1d25 0%, #120c0e 45%, #050505 100%);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "♥";
+    position: absolute;
+    font-size: 280px;
+    opacity: 0.035;
+    animation: pulse 3s infinite;
+}
+
+.small {
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(55px, 15vw, 120px);
+    font-weight: normal;
+    letter-spacing: 5px;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.hero p {
+    max-width: 650px;
+    margin-top: 25px;
+    font-size: 19px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeUp 1.5s ease 0.5s forwards;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 25px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: 0.5;
+}
+
+.story {
+    background: #111;
+}
+
+.story h2,
+.gallery h2,
+.final h2 {
+    font-size: clamp(35px, 9vw, 65px);
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.story p {
+    max-width: 700px;
+    font-size: 19px;
+    line-height: 2;
+    color: #ddd;
+}
+
+.highlight {
+    color: #e8b8c3;
+}
+
+.gallery {
+    background: #080808;
+}
+
+.gallery-intro {
+    max-width: 600px;
+    line-height: 1.8;
+    color: #bbb;
+    margin-bottom: 45px;
+}
+
+.photos {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    animation: photoIn 1s ease forwards;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.photo:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.photo:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.photo:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.photo:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+.photo:nth-child(6) {
+    animation-delay: 0.75s;
+}
+
+.photo:active {
+    transform: scale(0.97);
+}
+
+.quote {
+    min-height: 65vh;
+    background:
+        linear-gradient(rgba(20, 10, 13, 0.88), rgba(20, 10, 13, 0.95));
+}
+
+.quote p {
+    max-width: 700px;
+    font-size: clamp(25px, 6vw, 45px);
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.final {
+    min-height: 90vh;
+    background: radial-gradient(circle, #32151e, #080808 65%);
+}
+
+.final p {
+    max-width: 700px;
+    font-size: 19px;
+    line-height: 2;
+    color: #ddd;
+}
+
+.signature {
+    margin-top: 40px;
+    font-size: 28px;
+    color: #e8b8c3;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes photoIn {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+@media (max-width: 600px) {
+    .photos {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="small">Seis anos de nós</div>
+
+    <h1>Flícia</h1>
+
+    <p>
+        Algumas pessoas entram na nossa vida.
+        Outras tornam-se parte dela.
+        Tu fizeste as duas coisas.
+    </p>
+
+    <div class="scroll">DESLIZA ↓</div>
+</section>
+
+<section class="story">
+    <h2>Quem és para mim</h2>
+
+    <p>
+        Tu és a minha companheira.
+        A mulher que está comigo há <span class="highlight">seis anos</span>.
+        Fiel, determinada e guerreira.
+        Uma mulher que sabe o que quer e que não espera que a vida lhe dê as coisas de mão beijada.
+        Tu batalhas. Tu corres atrás. Tu lutas.
+    </p>
+
+    <br>
+
+    <p>
+        Tens um coração enorme.
+        És bonita, educada e, muitas vezes, tens uma capacidade enorme de compreender.
+        E claro...
+        também tens aquele teu jeito de <span class="highlight">bater de frente comigo</span>.
+    </p>
+</section>
+
+<section class="gallery">
+
+    <h2>Seis anos. Seis momentos.</h2>
+
+    <p class="gallery-intro">
+        Não são apenas fotografias.
+        São pequenos pedaços da história que fomos construindo juntos.
+    </p>
+
+    <div class="photos">
+
+        <img src="fotos/foto1.jpeg" class="photo" alt="Flícia">
+
+        <img src="fotos/foto2.jpeg" class="photo" alt="Flícia">
+
+        <img src="fotos/foto3.jpeg" class="photo" alt="Flícia">
+
+        <img src="fotos/foto4.jpeg" class="photo" alt="Flícia">
+
+        <img src="fotos/foto5.jpeg" class="photo" alt="Flícia">
+
+        <img src="fotos/foto6.jpeg" class="photo" alt="Flícia">
+
+    </div>
+
+</section>
+
+<section class="quote">
+
+    <p>
+        “Às vezes nós batemos de frente.
+        Às vezes pensamos diferente.
+        Mas no meio de tudo isso existe uma certeza:
+        <span class="highlight">tu és a minha mulher.</span>”
+    </p>
+
+</section>
+
+<section class="final">
+
+    <h2>Seis anos depois...</h2>
+
+    <p>
+        Olho para trás e percebo que não foram apenas seis anos.
+        Foram conversas, discussões, risos, dificuldades, conquistas,
+        momentos bons e momentos que nos fizeram crescer.
+    </p>
+
+    <br>
+
+    <p>
+        E se existe alguma coisa que eu quero que saibas,
+        é que eu reconheço o teu valor.
+        Reconheço a mulher que és.
+        A tua força, a tua lealdade, o teu coração
+        e tudo aquilo que faz de ti a Flícia que eu conheço.
+    </p>
+
+    <div class="signature">
+        Para a minha mulher. ❤️
+    </div>
+
+</section>
+
+</body>
+</html>
